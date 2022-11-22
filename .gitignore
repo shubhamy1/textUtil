@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+/favicon_io
+/favicon_io.zip
 /.pnp
 .pnp.js
 
