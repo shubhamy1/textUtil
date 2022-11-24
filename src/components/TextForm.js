@@ -59,23 +59,23 @@ export default function TextForm(props) {
         <button className="btn btn-primary" onClick={handleOnUpClick}>
           Convert to Uppercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleOnLoClick}>
+        <button className="btn btn-primary mx-1 my-1" onClick={handleOnLoClick}>
           Convert to Lowercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleClear}>
+        <button className="btn btn-primary mx-1 my-1" onClick={handleClear}>
           Clear Text
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleCopy}>
+        <button className="btn btn-primary mx-1 my-1" onClick={handleCopy}>
           Copy Text
         </button>
-        <button className="btn btn-primary mx-2" onClick={removeExtraSpace}>
+        <button className="btn btn-primary mx-1 my-1" onClick={removeExtraSpace}>
           Remove Extra Spaces
         </button>
       </div>
       <div className="container my-2">
         <h2>Your text summary</h2>
         <p>
-          {text.split(" ").length} words and {text.length} characters
+          {text.split(" ").filter((elm)=>{return elm.length !==0}).length} words and {text.length} characters
         </p>
         <p>{0.008 * text.split(" ").length} Minutes read</p>
         <h2>Preview</h2>
