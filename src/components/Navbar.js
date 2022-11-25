@@ -39,7 +39,7 @@ export default function Navbar(props) {
                 About
               </Link>
             </li>
-           
+
             {/* <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"
@@ -72,10 +72,30 @@ export default function Navbar(props) {
               </ul>
             </li> */}
           </ul>
-          <div className="d-flex">
-              <div className="bg-primary rounded mx-2" style={{height:'40px',width:'30px'}}>
-              </div>
-            </div>
+
+          {/* //for adding color panel for different modesmodes */}
+          {/* <div className="d-flex">
+            <div
+              className="bg-primary rounded mx-2"
+              onClick={() => props.toggleMode("primary")}
+              style={{ height: "40px", width: "30px", cursor:'pointer' }}
+            ></div>
+            <div
+              className="bg-danger rounded mx-2"
+              onClick={() => props.toggleMode("danger")}
+              style={{ height: "40px", width: "30px", cursor:'pointer' }}
+            ></div>
+            <div
+              className="bg-warning rounded mx-2"
+              onClick={() => props.toggleMode("warning")}
+              style={{ height: "40px", width: "30px", cursor:'pointer' }}
+            ></div>
+            <div
+              className="bg-success rounded mx-2"
+              onClick={() => props.toggleMode("success")}
+              style={{ height: "40px", width: "30px", cursor:'pointer' }}
+            ></div>
+          </div> */}
           <div
             className={`form-check form-switch text-${
               props.mode === `light` ? `dark` : `light`
