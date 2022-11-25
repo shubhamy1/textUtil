@@ -39,6 +39,7 @@ export default function Navbar(props) {
                 About
               </Link>
             </li>
+           
             {/* <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"
@@ -70,21 +71,11 @@ export default function Navbar(props) {
                 </li>
               </ul>
             </li> */}
-            {/* <li className="nav-item">
-            <a className="nav-link disabled">Disabled</a>
-          </li> */}
           </ul>
-          {/* <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form> */}
+          <div className="d-flex">
+              <div className="bg-primary rounded mx-2" style={{height:'40px',width:'30px'}}>
+              </div>
+            </div>
           <div
             className={`form-check form-switch text-${
               props.mode === `light` ? `dark` : `light`
@@ -101,7 +92,7 @@ export default function Navbar(props) {
               className="form-check-label"
               htmlFor="flexSwitchCheckDefault"
             >
-              Enable DarkMode
+              Toggle Mode
             </label>
           </div>
         </div>
