@@ -1,5 +1,7 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+// import lightMode from "../assests/sun.svg"
+// import darkMode from "../assests/moon.svg"
 
 export default function Navbar(props) {
   return (
@@ -7,12 +9,12 @@ export default function Navbar(props) {
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
     >
       <div className="container-fluid">
-        {/* <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/">
           TextUtills
-        </Link> */}
-        <a className="navbar-brand" href="#">
+        </Link>
+        {/* <a className="navbar-brand" href="#">
           TextUtills
-        </a>
+        </a> */}
         <button
           className="navbar-toggler"
           type="button"
@@ -27,18 +29,19 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              {/* <Link className="nav-link active" aria-current="page" to="/">
+              <Link className="nav-link" aria-current="page" to="/">
                 Home
-              </Link> */}
-              <a className="nav-link active" aria-current="page" href="#">
+              </Link>
+              {/* <a className="nav-link active" aria-current="page" href="#">
                 Home
-              </a>
+              </a> */}
             </li>
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/about">
                 About
               </Link>
-            </li> */}
+            </li>
+
             {/* <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"
@@ -70,21 +73,31 @@ export default function Navbar(props) {
                 </li>
               </ul>
             </li> */}
-            {/* <li className="nav-item">
-            <a className="nav-link disabled">Disabled</a>
-          </li> */}
           </ul>
-          {/* <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form> */}
+
+          {/* //for adding color panel for different modesmodes */}
+          {/* <div className="d-flex">
+            <div
+              className="bg-primary rounded mx-2"
+              onClick={() => props.toggleMode("primary")}
+              style={{ height: "40px", width: "30px", cursor:'pointer' }}
+            ></div>
+            <div
+              className="bg-danger rounded mx-2"
+              onClick={() => props.toggleMode("danger")}
+              style={{ height: "40px", width: "30px", cursor:'pointer' }}
+            ></div>
+            <div
+              className="bg-warning rounded mx-2"
+              onClick={() => props.toggleMode("warning")}
+              style={{ height: "40px", width: "30px", cursor:'pointer' }}
+            ></div>
+            <div
+              className="bg-success rounded mx-2"
+              onClick={() => props.toggleMode("success")}
+              style={{ height: "40px", width: "30px", cursor:'pointer' }}
+            ></div>
+          </div> */}
           <div
             className={`form-check form-switch text-${
               props.mode === `light` ? `dark` : `light`
@@ -101,8 +114,10 @@ export default function Navbar(props) {
               className="form-check-label"
               htmlFor="flexSwitchCheckDefault"
             >
-              Enable DarkMode
+              Toggle Mode
             </label>
+            {/* <img src={lightMode} alt="light mode"></img> */}
+            {/* <img src={darkMode} alt="dark mode"></img> */}
           </div>
         </div>
       </div>
