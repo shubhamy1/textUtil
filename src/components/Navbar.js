@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import lightMode from "../assests/sun.svg"
+// import darkMode from "../assests/moon.svg"
 
 export default function Navbar(props) {
   return (
@@ -114,6 +116,8 @@ export default function Navbar(props) {
             >
               Toggle Mode
             </label>
+            {/* <img src={lightMode} alt="light mode"></img> */}
+            {/* <img src={darkMode} alt="dark mode"></img> */}
           </div>
         </div>
       </div>
